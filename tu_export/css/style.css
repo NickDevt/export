@@ -29,6 +29,7 @@
 
 .bbutton {
   width: 35px;
+  line-height: 39px;
   position: absolute;
   right: 0;
   top: 0;
@@ -90,7 +91,8 @@
     text-align: center; }
 
 .btn-custom1 {
-  width: 150px;
+  min-width: 150px;
+  white-space: nowrap;
   background: #34AAFD;
   color: white;
   border-radius: 50px;
