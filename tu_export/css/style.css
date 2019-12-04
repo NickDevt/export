@@ -1,0 +1,112 @@
+.section {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  color: #849FB4; }
+
+.section {
+  margin-top: 150px; }
+
+.divi {
+  padding: 10px 0px 10px 10px;
+  position: relative;
+  box-sizing: border-box; }
+
+.divi:hover {
+  box-sizing: border-box;
+  background: #E4EAEF; }
+  .divi:hover .bbutton {
+    background: #42B1FE;
+    transition: all 0s ease 0s; }
+
+.ar-down {
+  box-sizing: border-box;
+  background: #E4EAEF; }
+  .ar-down .bbutton {
+    background: #42B1FE;
+    transition: all 0s ease 0s; }
+
+.bbutton {
+  width: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 0px;
+  background: #ffffff;
+  border: none;
+  border-right: 0px;
+  color: #ffffff;
+  outline: 0 !important; }
+
+.bbutton::before {
+  content: url("../img/aright.svg"); }
+
+.ar-down > .bbutton::before {
+  content: url("../img/adown.svg"); }
+
+.table-wrapper {
+  box-shadow: 0.5px 0.5px 5px 0.1px rgba(211, 211, 211, 0.5);
+  margin-bottom: 20px; }
+  .table-wrapper table {
+    width: 100%; }
+  .table-wrapper tbody {
+    width: 100%; }
+  .table-wrapper tbody:last-child td:nth-child(odd) {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 75%;
+    background: #F8FBFD; }
+  .table-wrapper tbody:last-child td:nth-child(even) {
+    width: 25%;
+    background: rgba(255, 255, 255, 0.52); }
+  .table-wrapper tr {
+    width: 100%; }
+  .table-wrapper th {
+    font-size: 15px;
+    color: #42B1FE;
+    font-weight: 600;
+    padding: 10px; }
+  .table-wrapper th:nth-child(odd) {
+    width: 75%;
+    background: #F8FBFD;
+    text-align: left; }
+  .table-wrapper th:nth-child(even) {
+    width: 25%;
+    background: rgba(255, 255, 255, 0.52);
+    text-align: center; }
+  .table-wrapper td {
+    padding: 10px; }
+  .table-wrapper td:nth-child(odd) {
+    width: 75%;
+    background: #F8FBFD;
+    text-align: left; }
+  .table-wrapper td:nth-child(even) {
+    width: 25%;
+    background: rgba(255, 255, 255, 0.52);
+    text-align: center; }
+
+.btn-custom1 {
+  width: 150px;
+  background: #34AAFD;
+  color: white;
+  border-radius: 50px;
+  border: 0px;
+  padding: 10px;
+  box-shadow: 4px 5px 10px 0px rgba(52, 170, 253, 0.3); }
+  @media screen and (max-width: 350px) {
+    .btn-custom1 {
+      width: 100px; } }
+
+.footer-section {
+  background: #3491D2; }
+
+.p-resp {
+  padding: 0px;
+  margin: 0px;
+  width: 90%; }
+
+/*# sourceMappingURL=style.css.map */
