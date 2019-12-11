@@ -8,11 +8,7 @@ from docx.shared import Inches
 # https://ru.stackoverflow.com/questions/1056841/%d0%a3%d0%b4%d0%b0%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d1%87%d0%b0%d1%81%d1%82%d1%8c-%d1%81%d0%be%d0%b4%d0%b5%d1%80%d0%b6%d0%b8%d0%bc%d0%be%d0%b3%d0%be-docx-%d1%81-%d0%bf%d0%be%d0%bc%d0%be%d1%89%d1%8c%d1%8e-python?noredirect=1#comment1807402_1056841
 
 
-doc = docx.Document('библио/Педагогическое образование библиотечное дело в школьных учреждениях , 512 часов.docx')
-para = doc.paragraphs[:4]
-for i in para:
-    i.text = None
-# doc.save('библио/сука.docx')
+
 
 
 three = os.listdir('C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы')
@@ -24,30 +20,67 @@ three = os.listdir('C:/Users/ma-tarasov/Desktop/Задачи ---проекты �
 main_directory = ['C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы/ПП', 'C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы/ПК']
 
 
-def get_folders_list():
-    pp = main_directory[0]
+def onlytest():
+    url = 'C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы/ПП/библио/'
+    for i in os.listdir(url):
+        # print(url + i)
+        head_destroy(url + i)
 
-    pk = main_directory[1]
-    pp_folders = os.listdir(pp)
-    pk_folders = os.listdir(pk)
+
+
+def head_destroy(up):
+    doc = docx.Document(up)
+    para = doc.paragraphs[:4]
+    for i in para:
+        i.text = None
+    doc.save(up.replace('.docx', 'refine.docx'))
+
+
+
+
+def get_folders_list():
+    pp = main_directory[0]  #Путь к пп папке
+    pk = main_directory[1]  #Путь к пк папке
+    pp_folders = os.listdir(pp)  #Открывает список сожержимого в пп папке
+    # pk_folders = os.listdir(pk)  # лист в пк------------------------------------------------------------------------------------------------------------------------------------------
     for i in pp_folders:
-        if '.' not in i:
-            list1 = ['C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы/ПП/' + i]
+
+        if '.' not in i:    # Если нет разделителя расширения файла
+            list1 = ['C:/Users/ma-tarasov/Desktop/Задачи ---проекты конкретные/таблицы/ПП/' + i]  #Вывести названия подпапок пп + путь
+            # Тут всё норм
+            # print(list1)
+            # continue
+
+
             for i in list1:
+
+                # print(i, type(i))
+                # continue
+
                 xfile = os.listdir(i)
-                for i in xfile:
-                    final = os.path.abspath(i)
-                    # for i in final:
-                    print(pp)
+
+                # print(xfile)
+                # continue
+
+                # for i in xfile:
+                    # print(i)
+                    # continue
+                    # head_destroy(i)
+
+                    # print(os.path.abspath(os.path.dirname(i)))
+                    # continue
+
+                    # final = os.path.abspath(os.path.dirname(i))
+
+                    # print(final)
 
 
 
 
 get_folders_list()
 
+# onlytest()
 
-def head_destroy():
-    pass
 
 
 
